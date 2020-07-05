@@ -131,7 +131,7 @@ var testC = 7;
 var testD = "7";
 
 console.log("== 的結果 : " + (testC == testD));    //比較值
-console.log("=== 的結果 : " + (teseC === testD));  //比較值與類型
+console.log("=== 的結果 : " + (testC === testD));  //比較值與類型
 
 // 邏輯運算子
 var testE = true;
