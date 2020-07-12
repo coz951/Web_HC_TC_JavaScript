@@ -151,3 +151,110 @@ console.log(true || true);            // t
 console.log(true || false);           // t
 console.log(false || true);           // t
 console.log(false || false);          // f
+
+// 判斷式 if
+// 語法 Syntax
+// if (布林值) { 當布林值為 true 會執行 }
+if (true) {
+    console.log("我是判斷式~");
+}
+
+// else 否則
+// if (布林值) { 當布林值為 true 會執行 }
+// else { 當布林值為 false 會執行 }
+
+var boolTest = false;
+
+if (boolTest) {
+    console.log("布林值為 ture!");
+} else {
+    console.log("布林值為 false");
+}
+
+// 如果 分數 >= 60 : 及格
+// 如果 分數 <= 60 : 補考
+// 如果 分數 <= 40 : 被當
+var score = document.getElementById("score");
+var result = document.getElementById("result");
+
+score.onchange = () => {
+    var s = parseInt(score.value);   // 文字轉整數
+
+    if (s >= 60) {
+        result.innerText = "分數 : " + s + " - 及格";
+    }
+    else if (s >= 40) {
+        result.innerText = "分數 : " + s + " - 補考";
+    }
+    else {
+        result.innerText = "分數 : " + s + " - 被當";
+    }
+}
+
+// 迴圈 for
+// 語法
+// for (初始值; 條件-布林值; 迭代器-迴圈結束會執行的區塊) {}
+
+// 初始值: 迴圈開始的值
+// 條  件: 迴圈會執行的條件 - 當條件為 true 執行 ，false 結束迴圈
+// 迭代器: 初始值處理 - 遞增 ++
+
+for (let i = 0; i < 10; i++) {
+    console.log("迴圈:" + i);
+}
+
+// 陣列
+var products =["冰美式","卡布奇諾","摩卡"];
+
+//  products.length 陣列.長度(數量) 3
+
+for (let i = 0; i < products.length; i++) {
+    console.log(products[i]);
+}
+
+// 透過類別取得複數元素 - 結果為陣列 
+var ps = document.getElementsByClassName("product");
+
+console.log(ps);
+
+for (let i = 0; i <ps.length; i++) {
+    ps[i].innerText= products[i]; 
+}
+
+// 常數 const
+// 不能變更
+const pi = 3.14159;
+
+// pi = 4.123456;
+// pi = pi + 10;
+
+// let 與 var 差異
+// let 在同樣的區塊內不能重複 - 安全
+// 只在區塊內有效
+
+var countA = 10;
+var countA = 7;
+// let countA = 5;  // 重複瀏覽器顯示錯誤
+
+{
+    let countA = 5;
+    console.log(countA);
+}
+
+console.log(countA);
+
+var countB = 99;
+
+{
+    var countB =77;
+}
+
+console.log(countB);
+
+let countC =99;
+
+{
+    let countC = 77;
+}
+
+console.log(countC);
